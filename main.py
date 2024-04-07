@@ -33,8 +33,8 @@ licC = db["licenseplates"]
 
 customtkinter.set_appearance_mode("System")
 customtkinter.set_default_color_theme("dark-blue")
-# cap = cv.VideoCapture(0)
-cap = cv2.VideoCapture("demo.mp4")
+cap = cv.VideoCapture(0)
+# cap = cv2.VideoCapture("demo.mp4")
 
 results = {}
 mot_tracker = Sort()
@@ -138,7 +138,7 @@ class Video(customtkinter.CTk):
                                             isNear = True
                                             break
                                     if not isNear:
-                                        locC.insert_one({"number": license_plate_text, "long": long, "lat": lat})
+                                        locC.insert_one({"number": license_plate_text, "long": long, "lat": lat, "val": 1})
 
             image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGBA)
             dis_image = Image.fromarray(image)

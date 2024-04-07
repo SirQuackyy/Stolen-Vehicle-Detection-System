@@ -3,7 +3,6 @@ import os
 customtkinter.set_appearance_mode("System")
 customtkinter.set_default_color_theme("dark-blue")
 
-
 hub = customtkinter.CTk()
 hub.title("LICENSE TO STEAL")
 
